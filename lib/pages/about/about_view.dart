@@ -100,45 +100,45 @@ class AboutPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 4.0,
             children: [
-              const FaIcon(
-                FontAwesomeIcons.flutter,
-                size: 16,
-                color: Colors.lightBlue,
-              ),
-              const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
-              FaIcon(
-                FontAwesomeIcons.dartLang,
-                size: 16,
-                color: context.theme.colorScheme.onSurface.withValues(
-                  alpha: 0.8,
-                ),
-              ),
-              const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
-              FaIcon(
-                FontAwesomeIcons.rust,
-                size: 16,
-                color: context.theme.colorScheme.onSurface.withValues(
-                  alpha: 0.8,
-                ),
-              ),
-              const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
-              const FaIcon(
-                FontAwesomeIcons.solidHeart,
-                size: 16,
-                color: Colors.pinkAccent,
-              ),
+              // const FaIcon(
+              //   FontAwesomeIcons.flutter,
+              //   size: 16,
+              //   color: Colors.lightBlue,
+              // ),
+              // const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
+              // FaIcon(
+              //   FontAwesomeIcons.dartLang,
+              //   size: 16,
+              //   color: context.theme.colorScheme.onSurface.withValues(
+              //     alpha: 0.8,
+              //   ),
+              // ),
+              // const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
+              // FaIcon(
+              //   FontAwesomeIcons.rust,
+              //   size: 16,
+              //   color: context.theme.colorScheme.onSurface.withValues(
+              //     alpha: 0.8,
+              //   ),
+              // ),
+              // const SizedBox(height: 12, child: VerticalDivider(thickness: 2)),
+              // const FaIcon(
+              //   FontAwesomeIcons.solidHeart,
+              //   size: 16,
+              //   color: Colors.pinkAccent,
+              // ),
             ],
           ),
-          ExpandTapWidget(
-            tapPadding: const EdgeInsets.all(4.0),
-            onTap: logic.toIcp,
-            child: Text(
-              '赣ICP备2022010939号-4A',
-              style: context.textTheme.labelMedium?.copyWith(
-                color: context.theme.colorScheme.onSurfaceVariant,
-              ),
-            ),
-          ),
+          // ExpandTapWidget(
+          //   tapPadding: const EdgeInsets.all(4.0),
+          //   onTap: logic.toIcp,
+          //   child: Text(
+          //     '赣ICP备2022010939号-4A',
+          //     style: context.textTheme.labelMedium?.copyWith(
+          //       color: context.theme.colorScheme.onSurfaceVariant,
+          //     ),
+          //   ),
+          // ),
         ],
       );
     }
@@ -206,13 +206,13 @@ class AboutPage extends StatelessWidget {
                             await logic.toReportPage();
                           },
                         ),
-                        AdaptiveListTile(
-                          leading: const Icon(Icons.attach_money_rounded),
-                          title: Text(context.l10n.aboutDonate),
-                          isLast: true,
-                          trailing: const Icon(Icons.chevron_right_rounded),
-                          onTap: logic.toSponsor,
-                        ),
+                        // AdaptiveListTile(
+                        //   leading: const Icon(Icons.attach_money_rounded),
+                        //   title: Text(context.l10n.aboutDonate),
+                        //   isLast: true,
+                        //   trailing: const Icon(Icons.chevron_right_rounded),
+                        //   onTap: logic.toSponsor,
+                        // ),
                       ],
                     ),
                   ),

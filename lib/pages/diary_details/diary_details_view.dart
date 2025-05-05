@@ -36,6 +36,8 @@ class DiaryDetailsPage extends StatelessWidget {
   }
 
   Widget buildChipList({required BuildContext context, required Diary diary}) {
+    final logic = Bind.find<DiaryDetailsLogic>(tag: tag);
+    final state = Bind.find<DiaryDetailsLogic>(tag: tag).state;
     final dateTime = DateFormat.yMMMd().add_Hms().format(diary.time).split(' ');
     final date = dateTime.first;
     final time = dateTime.last;
@@ -64,6 +66,7 @@ class DiaryDetailsPage extends StatelessWidget {
                   color: context.theme.colorScheme.onSurface,
                 ),
               ),
+
             ],
           ),
           const Icon(Icons.access_time_outlined),
@@ -109,9 +112,26 @@ class DiaryDetailsPage extends StatelessWidget {
             const Icon(Icons.tag_outlined),
           );
         }),
+        GestureDetector(
+          onTap: () async {
+            logic.toEditPage(state.diary);
+          },
+          child: buildAChip(
+            context: context,
+            Text(
+              context.l10n.diaryEdit,
+              style: context.textTheme.labelLarge!.copyWith(
+                color: context.theme.colorScheme.onSurface,
+              ),
+            ),
+            const Icon(Icons.edit_rounded),
+          ),
+        ),
+
       ],
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -200,20 +220,7 @@ class DiaryDetailsPage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                const PopupMenuDivider(),
-                                PopupMenuItem(
-                                  onTap: () async {
-                                    logic.toEditPage(state.diary);
-                                  },
-                                  child: Row(
-                                    spacing: 16.0,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Icon(Icons.edit_rounded),
-                                      Text(context.l10n.diaryEdit),
-                                    ],
-                                  ),
-                                ),
+                                
                                 const PopupMenuDivider(),
                               ],
                               PopupMenuItem(

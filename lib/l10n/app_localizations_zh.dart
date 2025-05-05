@@ -99,7 +99,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingDataSyncAndBackup => '备份与同步';
 
   @override
-  String get settingDashboard => '仪表盘';
+  String get settingDashboard => '个人中心';
 
   @override
   String get settingData => '数据';

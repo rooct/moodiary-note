@@ -103,22 +103,22 @@ class SettingPage extends StatelessWidget {
                 text: context.l10n.settingFunctionAnalysis,
                 onTap: logic.toAnalysePage,
               ),
-              buildAFeatureButton(
-                icon: FaIcon(
-                  FontAwesomeIcons.solidMap,
-                  color: context.theme.colorScheme.secondary,
-                ),
-                text: context.l10n.settingFunctionTrailMap,
-                onTap: logic.toMap,
-              ),
-              buildAFeatureButton(
-                icon: FaIcon(
-                  FontAwesomeIcons.solidCommentDots,
-                  color: context.theme.colorScheme.secondary,
-                ),
-                text: context.l10n.settingFunctionAIAssistant,
-                onTap: logic.toAi,
-              ),
+              // buildAFeatureButton(
+              //   icon: FaIcon(
+              //     FontAwesomeIcons.solidMap,
+              //     color: context.theme.colorScheme.secondary,
+              //   ),
+              //   text: context.l10n.settingFunctionTrailMap,
+              //   onTap: logic.toMap,
+              // ),
+              // buildAFeatureButton(
+              //   icon: FaIcon(
+              //     FontAwesomeIcons.solidCommentDots,
+              //     color: context.theme.colorScheme.secondary,
+              //   ),
+              //   text: context.l10n.settingFunctionAIAssistant,
+              //   onTap: logic.toAi,
+              // ),
             ],
           ),
         ],

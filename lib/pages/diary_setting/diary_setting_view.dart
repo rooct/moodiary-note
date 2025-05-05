@@ -27,17 +27,17 @@ class DiarySettingPage extends StatelessWidget {
           margin: EdgeInsets.zero,
           child: Column(
             children: [
-              Obx(() {
-                return AdaptiveSwitchListTile(
-                  value: state.autoWeather.value,
-                  isFirst: true,
-                  onChanged: (value) {
-                    logic.autoWeather(value);
-                  },
-                  title: context.l10n.diarySettingAutoGetWeather,
-                  secondary: const Icon(Icons.wb_sunny_rounded),
-                );
-              }),
+              // Obx(() {
+              //   return AdaptiveSwitchListTile(
+              //     value: state.autoWeather.value,
+              //     isFirst: true,
+              //     onChanged: (value) {
+              //       logic.autoWeather(value);
+              //     },
+              //     title: context.l10n.diarySettingAutoGetWeather,
+              //     secondary: const Icon(Icons.wb_sunny_rounded),
+              //   );
+              // }),
               Obx(() {
                 return AdaptiveSwitchListTile(
                   value: state.autoCategory.value,

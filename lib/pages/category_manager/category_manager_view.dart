@@ -30,10 +30,10 @@ class CategoryManagerPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return AdaptiveListTile(
                         title: Text(state.categoryList[index].categoryName),
-                        subtitle: Text(
-                          state.categoryList[index].id,
-                          style: const TextStyle(fontSize: 8),
-                        ),
+                        // subtitle: Text(
+                        //   state.categoryList[index].id,
+                        //   style: const TextStyle(fontSize: 8),
+                        // ),
                         onTap: null,
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,

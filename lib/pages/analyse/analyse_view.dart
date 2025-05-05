@@ -195,23 +195,23 @@ class AnalysePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Card.filled(
-                color: context.theme.colorScheme.surfaceContainer,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          logic.getAi();
-                        },
-                        child: const Text('AI 分析'),
-                      ),
-                      if (state.reply != '') ...[Text(state.reply)],
-                    ],
-                  ),
-                ),
-              ),
+              // Card.filled(
+              //   color: context.theme.colorScheme.surfaceContainer,
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(8.0),
+              //     child: Column(
+              //       children: [
+              //         TextButton(
+              //           onPressed: () {
+              //             logic.getAi();
+              //           },
+              //           child: const Text('AI 分析'),
+              //         ),
+              //         if (state.reply != '') ...[Text(state.reply)],
+              //       ],
+              //     ),
+              //   ),
+              // ),
               GridView.count(
                 crossAxisCount: size.width > 600 ? 2 : 1,
                 shrinkWrap: true,

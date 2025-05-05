@@ -278,7 +278,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingDashboard.
   ///
   /// In zh, this message translates to:
-  /// **'仪表盘'**
+  /// **'个人中心'**
   String get settingDashboard;
 
   /// No description provided for @settingData.

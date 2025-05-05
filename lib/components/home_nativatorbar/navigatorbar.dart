@@ -59,9 +59,9 @@ class HomeNavigatorBar extends StatelessWidget {
                   return NavigationBar(
                     destinations: [
                       NavigationDestination(
-                        icon: const Icon(Icons.article_outlined),
+                        icon: const Icon(Icons.home),
                         label: context.l10n.homeNavigatorDiary,
-                        selectedIcon: const Icon(Icons.article),
+                        selectedIcon: const Icon(Icons.home),
                       ),
                       NavigationDestination(
                         icon: const Icon(UniconsLine.calender),
@@ -74,9 +74,9 @@ class HomeNavigatorBar extends StatelessWidget {
                         selectedIcon: const Icon(UniconsSolid.image_v),
                       ),
                       NavigationDestination(
-                        icon: const Icon(UniconsLine.layer_group),
+                        icon: const Icon(UniconsLine.user),
                         label: context.l10n.homeNavigatorSetting,
-                        selectedIcon: const Icon(UniconsSolid.layer_group),
+                        selectedIcon: const Icon(UniconsLine.user),
                       ),
                     ],
                     selectedIndex: navigatorIndex.value,

@@ -22,84 +22,84 @@ class LaboratoryPage extends StatelessWidget {
           return ListView(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
             children: [
-              QrInputTile(
-                title: '${context.l10n.labTencentCloud} ID',
-                value: PrefUtil.getValue<String>('tencentId') ?? '',
-                prefix: 'tencentId',
-                onValue: (value) async {
-                  final res = await logic.setTencentID(id: value);
-                  if (res) {
-                    toast.success();
-                  } else {
-                    toast.error();
-                  }
-                },
-              ),
-              const Gap(12),
-              QrInputTile(
-                title: '${context.l10n.labTencentCloud} Key',
-                value: PrefUtil.getValue<String>('tencentKey') ?? '',
-                prefix: 'tencentKey',
-                onValue: (value) async {
-                  final res = await logic.setTencentKey(key: value);
-                  if (res) {
-                    toast.success();
-                  } else {
-                    toast.error();
-                  }
-                },
-              ),
-              const Gap(12),
-              QrInputTile(
-                title: '${context.l10n.labQweather} Key',
-                value: PrefUtil.getValue<String>('qweatherKey') ?? '',
-                prefix: 'qweatherKey',
-                onValue: (value) async {
-                  final res = await logic.setQweatherKey(key: value);
-                  if (res) {
-                    toast.success();
-                  } else {
-                    toast.error();
-                  }
-                },
-              ),
-              const Gap(12),
-              QrInputTile(
-                title: '${context.l10n.labQweather} API Host',
-                value: PrefUtil.getValue<String>('qweatherApiHost') ?? '',
-                prefix: 'qweatherApiHost',
-                onValue: (value) async {
-                  final res = await logic.setQweatherApiHost(host: value);
-                  if (res) {
-                    toast.success();
-                  } else {
-                    toast.error();
-                  }
-                },
-              ),
+              // QrInputTile(
+              //   title: '${context.l10n.labTencentCloud} ID',
+              //   value: PrefUtil.getValue<String>('tencentId') ?? '',
+              //   prefix: 'tencentId',
+              //   onValue: (value) async {
+              //     final res = await logic.setTencentID(id: value);
+              //     if (res) {
+              //       toast.success();
+              //     } else {
+              //       toast.error();
+              //     }
+              //   },
+              // ),
+              // const Gap(12),
+              // QrInputTile(
+              //   title: '${context.l10n.labTencentCloud} Key',
+              //   value: PrefUtil.getValue<String>('tencentKey') ?? '',
+              //   prefix: 'tencentKey',
+              //   onValue: (value) async {
+              //     final res = await logic.setTencentKey(key: value);
+              //     if (res) {
+              //       toast.success();
+              //     } else {
+              //       toast.error();
+              //     }
+              //   },
+              // ),
+              // const Gap(12),
+              // QrInputTile(
+              //   title: '${context.l10n.labQweather} Key',
+              //   value: PrefUtil.getValue<String>('qweatherKey') ?? '',
+              //   prefix: 'qweatherKey',
+              //   onValue: (value) async {
+              //     final res = await logic.setQweatherKey(key: value);
+              //     if (res) {
+              //       toast.success();
+              //     } else {
+              //       toast.error();
+              //     }
+              //   },
+              // ),
+              // const Gap(12),
+              // QrInputTile(
+              //   title: '${context.l10n.labQweather} API Host',
+              //   value: PrefUtil.getValue<String>('qweatherApiHost') ?? '',
+              //   prefix: 'qweatherApiHost',
+              //   onValue: (value) async {
+              //     final res = await logic.setQweatherApiHost(host: value);
+              //     if (res) {
+              //       toast.success();
+              //     } else {
+              //       toast.error();
+              //     }
+              //   },
+              // ),
 
-              const Gap(12),
-              QrInputTile(
-                title: '${context.l10n.labTianditu} Key',
-                value: PrefUtil.getValue<String>('tiandituKey') ?? '',
-                prefix: 'tiandituKey',
-                onValue: (value) async {
-                  final res = await logic.setTiandituKey(key: value);
-                  if (res) {
-                    toast.success();
-                  } else {
-                    toast.error();
-                  }
-                },
-              ),
-              const Gap(12),
+              // const Gap(12),
+              // QrInputTile(
+              //   title: '${context.l10n.labTianditu} Key',
+              //   value: PrefUtil.getValue<String>('tiandituKey') ?? '',
+              //   prefix: 'tiandituKey',
+              //   onValue: (value) async {
+              //     final res = await logic.setTiandituKey(key: value);
+              //     if (res) {
+              //       toast.success();
+              //     } else {
+              //       toast.error();
+              //     }
+              //   },
+              // ),
+              // const Gap(12),
               ListTile(
                 onTap: () async {
                   logic.exportErrorLog();
                 },
                 title: const Text('导出日志文件'),
               ),
-              const Gap(12),
+              // const Gap(4),
               ListTile(
                 onTap: () async {
                   final res = await logic.aesTest();
@@ -111,7 +111,7 @@ class LaboratoryPage extends StatelessWidget {
                 },
                 title: const Text('加密测试'),
               ),
-              const Gap(12),
+              // const Gap(12),
               ListTile(
                 onTap: () async {
                   final res = await logic.clearImageThumbnail();
@@ -123,7 +123,7 @@ class LaboratoryPage extends StatelessWidget {
                 },
                 title: const Text('清理图片缩略图缓存'),
               ),
-              const Gap(12),
+              // const Gap(12),
               ListTile(
                 onTap: () async {
                   final res = logic.generateFTSAndKeyword();
